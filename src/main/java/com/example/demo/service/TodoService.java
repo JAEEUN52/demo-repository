@@ -11,13 +11,13 @@ public class TodoService {
 	private TodoRepository repository;
 
 public String testService(){
-	// Todo Entity 생성
-	TodoEntity entity = TodoEntity.builder().UserId("user01").title("My first todo item").build();
-	// Todo Entity 저장
-	repository.save(entity);
-	// Todo Entity 검색
-	TodoEntity savedEntity = 
-	repository.findByUserId(entity.getUserId()).get(0);
-	return savedEntity.getUserId();
-	}
+// Todo Entity 생성
+TodoEntity entity = TodoEntity.builder().userId("JEONG JAEEUN").title("My first todo item").build();
+//Todo Entity 저장
+repository.save(entity);
+//Todo Entity 검색
+TodoEntity savedEntity = 
+repository.searchByUserId(entity.getUserId()).get(0);
+return savedEntity.getUserId();
+}
 }
